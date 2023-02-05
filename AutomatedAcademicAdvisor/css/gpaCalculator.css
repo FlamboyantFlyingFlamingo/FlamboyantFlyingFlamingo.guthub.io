@@ -1,0 +1,419 @@
+:root{
+    --primaryCLR: #9C6E00;
+    --secondaryCLR: #ffffff;
+    --black-shade-1:#232323;
+    --white-shade-1:#ffffff;
+  }
+  
+  body{
+    /* margin: 0; */
+    margin: 0 0 -50px 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 1em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #444;
+    background: #FFD700;
+  }
+  
+  h1{
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: #34495e;
+    font-size: 2em;
+  }
+  
+  h2{
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  
+  table{
+    border-collapse: collapse;
+  } 
+  
+  button{
+    font-size: .9rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    padding: 0.5em 0.6em;
+    font-weight: 500;
+    line-height: 20px;
+    vertical-align: middle;
+    border: 1px solid;
+    border-radius: 6px;
+    color: var(--secondaryCLR);
+    background-color: var(--primaryCLR);
+    border-color: #1b1f2326;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+    transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    transition-property: color, background-color, border-color;
+  }
+  
+  .generalBtn{ 
+    color: var(--secondaryCLR);
+    background: var(--primaryCLR);
+    padding: 0.8rem 0;
+    width: 125px;
+    font-family: inherit;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: larger;
+    cursor: pointer;
+    border: none;
+    transition: all 0.6s ease;
+  }
+  
+  
+  /*REMOVE Button*/
+  .remove-course-button{
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--secondaryCLR);
+  background-color: var(--primaryCLR);
+  padding: .5rem .5rem;
+  border: 2px solid var(--primaryCLR);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  border-radius: 50px;
+  transition : 1000ms;
+  transform: translateY(0);
+  
+  align-items: center;
+  cursor: pointer;
+  } 
+  
+  /* .btn:hover{
+  transition : 1000ms;
+  padding: 10px 50px;
+  transform : translateY(-0px);
+  } 
+  
+  
+  
+  
+  
+  /*For Input Box*/
+  
+  /*******GPA Form************/
+  
+  #gpa-form{
+    /* padding-left: 20px; */
+    padding-bottom: 30px;
+  }
+  
+  
+  input {
+    background-color: transparent;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: grey;
+  }
+  input:focus {
+    border-color: black;
+  } 
+  
+  
+  /*For Table*/
+   .content-table {
+    margin: 25px 10px;
+    font-size: 1em;
+    /* min-width: 400px; How small can the table get */
+    max-width: 875px; /*How big can the table get*/
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .content-table thead tr { /*Attributes for the header of the table*/
+    background-color: var(--primaryCLR);
+    color: var(--secondaryCLR);
+    text-align: left;
+    font-weight: bold;
+    /* font-size: 34px; */
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .course-name{ /*Manipulating Coure Name Column Size*/
+    width: 60%;
+  }
+  
+  .grade{ /*Manipulating Grade Column Size*/
+    width: 10%;
+  }
+  
+  .edit{ /*Manipulating Edit Name Column Size*/
+    width: 10%;
+  }
+  
+  .content-table td input{ /*Make the input line as long as the column*/
+    width: 100%;
+  }
+  
+  .course-name input{ /*Make the text entered by the user larger*/
+    font-size: 1rem;
+  }
+  
+  .grade input{ /*Make the number entered by the user larger*/
+    font-size: 1rem;
+  }
+  
+  .content-table i{
+    font-size: 20px /*Make delete icon bigger*/;
+  }
+  
+  
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #E5E7E9;
+  }
+  
+  .content-table tbody tr:nth-of-type(odd) {
+    background-color: #f3f3f3
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 4px solid var(--primaryCLR);
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: var(--primaryCLR);
+  }
+  
+  
+  
+  
+  
+  
+  /*For the GPA Output, I have not used the wrapper div since it messes with the format*/
+  
+  .wrapper {
+    position: absolute;
+    width: 80vw;
+    /* transform: translate(-50%, -50%); */
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  .container {
+    margin: auto; /*Enters the GPA Output Div*/
+    margin-bottom: 1em;
+      /* width: 25%; */
+    min-width: 230px;
+    max-width: 260px;
+    /* height: 28vmin; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em 0;
+    position: relative;
+    /* font-size: 25px; */
+    border-radius: 0.5em;
+    background-color: #21242b;
+    border-bottom: 10px solid var(--primaryCLR);
+  }
+  .container i {
+    color: var(--primaryCLR);
+    font-size: 1.5em;
+    text-align: center;
+  }
+  span.num {
+    color: var(--secondaryCLR);
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  span.text {
+    color: #e0e0e0;
+    /* font-size: 1em; */
+    text-align: center;
+    padding: 0.7em 0;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 0;
+  }
+  
+  .threeActions{
+    margin-left: 10px;
+  }
+  
+  .threeActions button{
+    margin-bottom: 10px;
+  
+  }
+  
+  
+  .remove-course-button{
+    margin-left: 10px;
+  }
+  
+  
+  /*------ Section: Header ------*/
+  .topnav {
+    background-color: var(--primaryCLR);
+    overflow: hidden;
+    /* padding: 1rem; */
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: var(--primaryCLR);
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 650px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 650px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+  
+  
+  
+  /*------ Section: Footer ------*/
+  footer {
+    background-color: var(--black-shade-1);
+  }
+  
+  footer h3 {
+    margin: 0;
+  }
+  
+  footer h3,
+  footer h4 {
+    color: var(--white-shade-1);
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  
+  footer .row {
+    display: flex;
+    justify-content:space-around;
+    gap: 1rem;
+    align-items: center;
+    height: 8em;
+    padding-top: 30px;
+    margin-bottom: 2rem;
+  }
+  .footer-about {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid var(--white-shade-1);
+  }
+  .social-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .social-links a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--white-shade-1);
+  }
+  footer p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+  
+  }
+  
+  footer a
+  {
+    text-decoration: none;
+  }
+  
+  footer p
+  {
+    line-height: 1.8;
+    font-weight: 700;
+  }
+  
+  
+  /**********************************/
+  
+  @media all and (min-width: 850px) {
+  
+    .content-table button{
+      text-align: center;
+    }
+  
+    button{
+      font-size: 13px; /*Button Size*/
+    }
+  
+    .content-table .course-row{
+      font-size: 20px; /*Changes the table header size*/
+    }
+  
+    .container{
+      font-size: medium; /*Changes the cumalative GPA size*/
+    }
+  
+    .semester .content-table{
+      margin-left: 5em;
+    }
+  
+    .threeActions{
+      margin-left: 5.1em;
+    }
+  
+  }

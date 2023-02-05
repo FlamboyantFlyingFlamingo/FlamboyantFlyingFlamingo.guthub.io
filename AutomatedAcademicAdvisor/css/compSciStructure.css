@@ -1,0 +1,366 @@
+:root
+{
+    --headingColor: #fff;
+    --heading-font-size-3: 1.2rem;
+    --black-shade-1:#232323;/*For Footer Background*/
+    --white-shade-1:#ffffff; /*For Footer Icons*/
+
+}
+
+
+  h3 {
+    font-size: var(--heading-font-size-3);
+    color: var(--headingColor);
+    font-weight: 700;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffd700;
+    /**height: 100vh;**/
+    /* display: grid;
+    place-items: center center; */
+    font-family: 'Poppins',sans-serif;
+}
+
+
+.cards{
+    /* display: grid; */
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    padding: 20px;
+    grid-gap: 40px;
+}
+.card{
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+}
+.container{
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+}
+img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+.container:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+.card1>.container:after{
+        background-image: linear-gradient(
+            135deg,
+            #BF953F,
+            #FCF6BA
+        ); 
+}
+.card2>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        #2bdce3,
+        #42ffdb
+    );
+}
+.card3>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        #ffab1d,
+        #f8501c
+    );
+}
+.details{
+    padding: 20px 10px;
+}
+
+.details>p{
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+
+/* .myselect{
+    margin: 30px;
+    padding: 20px;
+    background-color: paleturquoise;
+    font-size: 20px;
+    border: none;
+  } */
+
+
+  select{
+    /* position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+
+    background-color: #ff5700;*/
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance: none;
+    margin: 10px; 
+    width: 305px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    background-color: #daa520;
+    color: #ffffff;
+    border: 6px solid #daa520;
+    border-radius: 5px;
+    background-image: url("arrow-down1.png");
+    background-repeat: no-repeat;
+    background-size: 47px;
+    background-position: 247px -1.5px;
+    outline: none;
+    box-shadow: 0 0 20px rgba(20,20,30,0.25);
+}
+
+
+select::-ms-expand{
+    display: none;
+}
+
+
+/* select:hover{
+    border: 6px solid #ff66a3;
+} */
+
+
+select option{
+    background-color: #daa520;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.selected{ /**Remove first option from dropdown when user selects a choice**/
+    display: none;
+}
+
+
+
+/*for the read button*/
+
+.hide{
+    display: none;
+}
+
+
+
+.sameLine p{
+    display:inline;
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.moreLessLink /*For the link that toggles more or less information*/
+{
+    color: white;
+}
+
+.center{
+    display: grid;
+    place-items: center;
+}
+
+/*------ Section: Footer ------*/
+footer 
+{
+    background-color: var(--black-shade-1);
+    padding: 2rem 3rem;
+    width: 100%; /*Cover entire screen*/
+}
+
+footer h3 
+{
+    margin: 0;
+}
+
+  footer h3,
+  footer h4 {
+    color: var(--white-shade-1);
+    text-align: center;
+
+    margin: 1.5rem 0;
+  }
+
+footer .row 
+{
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem; */
+    /*width: 100%;*/
+    display: flex;
+    justify-content:space-around;
+    gap: 1rem;
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+.footer-about 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid var(--white-shade-1);
+}
+
+.social-links 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.social-links a 
+{
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--white-shade-1);
+}
+
+footer p 
+{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);  
+}
+  
+footer a
+{
+    text-decoration: none;
+}
+
+footer p
+{
+    line-height: 1.8;
+    font-weight: 700;
+}
+
+
+
+
+
+  /* Style the dropdown menu */
+  /* select {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+  }
+
+  form{
+    padding-top: 20px;
+  } */
+
+
+
+
+
+
+
+  /* .myselect{
+    padding: 10px;
+    background-color: paleturquoise;
+    font-size: 30px;
+    border: none;
+  } */
+
+
+/*Begining of NAV bar*/
+
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    width: 100%;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+  }
+  
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #daa520;
+    color: white;
+  }
+
+
+
+
+
+@media only screen and (min-width: 950px) /*On Large screen keep inline Nav bar*/
+{
+    .topnav a 
+    {
+        float: left;
+    }
+}
+
+/*End of NAV bar*/
+
+@media only screen and (max-width: 800px) 
+{
+    select{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 700px) 
+{
+   .cards /*Make the cards one column on smaller screen, max-width applies UP TO*/
+   {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+   }
+} 
+

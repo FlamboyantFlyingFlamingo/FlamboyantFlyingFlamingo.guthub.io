@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo list</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/roadmap.css" />
+    <script defer src="js/roadmap.js"></script>
+  </head>
+
+  <body>
+            <!-- <h1 class="title">Stuff I need to do</h1> -->
+
+            <div class="topnav" id="myTopnav">
+              <a href="index.html" class="active">AutomatedAcademicAdvisor</a>
+              <a href="cmpDepartment.html">Programmes</a>
+              <a href="#index.html">Home</a>
+              <a href="#other">Other</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+
+
+    <div class="theStructure">
+
+        <div class="all-tasks">
+          <h2 class="task-list-title">RoadMap</h2>
+          <ul class="task-list" data-lists></ul>
+
+          <form action="" data-new-list-form>
+            <input 
+              type="text"
+              class="new list"
+              data-new-list-input
+              placeholder="new list name"
+              aria-label="new list name"
+            />
+            <button class="btn create" aria-label="create new list">+</button>
+          </form>
+        </div>
+
+        <div class="todo-list" data-list-display-container>
+          <div class="todo-header">
+
+            <h2 class="list-title" data-list-title></h2>
+            <p class="task-count" data-list-count></p>
+          </div>
+
+          <div class="todo-body">
+            <div class="tasks" data-tasks></div>
+
+            <div class="new-task-creator">
+                <form action="" data-new-task-form>
+                    <input 
+                      type="text"
+                      data-new-task-input
+                      class="new task"
+                      placeholder="new class name"
+                      aria-label="new task name"
+                    />
+                    <button class="btn create" aria-label="create new task">+</button>
+                  </form>
+            </div>
+
+            <div class="delete-stuff">
+              <button class="btn delete" data-clear-complete-tasks-button>Clear completed classes</button>
+              <button class="btn delete" data-delete-list-button>Delete list</button>
+            </div>
+          </div>
+        </div>
+
+      
+        </div>
+        <template id="task-template">
+          <div class="task">
+            <input type="checkbox" />
+            <label>
+              <span class="custom-checkbox"></span>
+            </label>
+          </div>
+        </template>
+    </div>
+
+    <footer id="other">
+
+      <div class="row footer-contact">
+
+        <div class="column">
+          <h4>Learn About</h4>
+          <a href="cmpDepartment.html"><p>CMP Undergraduate Programmes</p></a>
+          <a href=""><p>BCS Undergraduate Programmes</p></a>
+        </div>
+
+        <div class="column">
+          <h4 id="other">Other</h4>
+          <a href=""><p>Dictionary</p></a>
+          <a href=""><p>GPA Calculator</p></a>
+        </div>
+
+      </div>
+  
+  
+      <div class="row footer-about">
+
+        <a href="index.html"><h3>AutomatedAcademicAdvisor</h3></a>
+
+        <div class="social-links">
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+
+      </div>
+
+  
+      <p class="footer-copyright">Copyright &copy; All rights reserved.</p>
+         
+    </footer> 
+
+
+  </body>
+</html>

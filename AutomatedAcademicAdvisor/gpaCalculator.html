@@ -1,0 +1,108 @@
+<html>
+   <head>
+      <title>GPA Calculator</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="css/gpaCalculator.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+      <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+       
+      <div class="topnav" id="myTopnav">
+         <a href="index.html" class="active">AutomatedAcademicAdvisor</a>
+         <a href="cmpDepartment.html">Programmes</a>
+         <a href="#index.html">Home</a>
+         <a href="#other">Other</a>
+         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+           <i class="fa fa-bars"></i>
+         </a>
+       </div>
+
+
+      <form class="gpa-form" id="gpa-form">
+         <div id="courses">
+            <div class="semester">
+               <h2>Semester 1</h2>
+               <button type="button" class="remove-semester-button">Remove Semester</button>
+               <table class="content-table">
+                <thead>
+                  <tr class="course-row">
+                     <th class="course-name">Course Name</th>
+                     <th class="grade">Grade</th>
+                     <th class="edit">Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- <tr class="course-row">
+                     <td class="course-name"><input type="text" id="course-name-1-1" name="course-name-1"></td>
+                     <td class="grade"><input type="text" id="course-grade-1-1" name="course-grade-1"></td>
+                     <td><button type="button" class="remove-course-button">X</i></button></td>
+                  </tr> -->
+                </tbody>
+               </table>
+            </div>
+         </div>
+
+         <div class="threeActions">
+         <button type="button" id="add-course-button">Add Course</button>
+         <button type="button" id="add-semester-button">Add Semester</button>
+         <button type="button" id="calculate-button">Calculate GPA</button>
+         
+         <button type="button" id="clear-data-button">Clear All Data</button>
+
+        </div>
+      </form>
+
+      <!-- <div class="wrapper"> -->
+         <div class="container">
+           <i class="fa fa-star"></i>
+           <span class="num"><p id="result"></p></span>
+           <span class="text">Cumulative GPA</span>
+         </div>
+       <!-- </div> -->
+
+
+
+       <footer id="other">
+
+         <div class="row footer-contact">
+   
+           <div class="column">
+             <h4>Learn About</h4>
+             <a href="cmpDepartment.html"><p>CMP Undergraduate Programmes</p></a>
+             <a href=""><p>BCS Undergraduate Programmes</p></a>
+           </div>
+   
+           <div class="column">
+             <h4 id="other">Other</h4>
+             <a href=""><p>Dictionary</p></a>
+             <a href="#gpa-form"><p>GPA Calculator</p></a>
+           </div>
+   
+         </div>
+     
+     
+         <div class="row footer-about">
+           <a href="index.html"><h3>AutomatedAcademicAdvisor</h3></a>
+           <div class="social-links">
+             <a href="#">
+               <i class="fab fa-instagram"></i>
+             </a>
+             <a href="#">
+               <i class="fab fa-twitter"></i>
+             </a>
+             <a href="#">
+               <i class="fab fa-facebook-f"></i>
+             </a>
+           </div>
+         </div>
+         <p class="footer-copyright">Copyright &copy; All rights reserved.</p>
+       </footer> 
+
+      <script src="js/gpaCalculator.js"></script>
+   </body>
+</html>
