@@ -275,6 +275,14 @@ p
     width: 20px;
 }
 
+/* This affects the span used to make the modal box appear */
+.modalBox
+{
+    text-decoration: underline;
+    color:#5d00a0;
+    cursor: pointer;
+}
+
 @media (max-width: 1000px)
 {
     .container
