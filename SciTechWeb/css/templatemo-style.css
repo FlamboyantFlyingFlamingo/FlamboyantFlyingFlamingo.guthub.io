@@ -97,7 +97,7 @@ http://www.templatemo.com/tm-509-hydro
   .section-title h2 {
     margin-top: 0;
     margin-bottom: 10px;
-    line-height: 0;
+    /* line-height: 0; */
   }
 
   .section-title .line-bar {
