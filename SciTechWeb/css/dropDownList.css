@@ -51,7 +51,7 @@
   -ms-flex-pack: center;
   text-align: center;
   border: none;
-  background-color: #ffeba7;
+  background-color: #FDDA0D;
   cursor: pointer;
   color: #102770;
   box-shadow: 0 12px 35px 0 rgba(255,235,167,.15);
@@ -207,7 +207,7 @@
 .dropdown-sub:checked + label:hover,
 .dropdown-sub:not(:checked) + label:hover{
   color: #102770;
-  background-color: #ffeba7;
+  background-color: #FDDA0D;
 }
 
 
